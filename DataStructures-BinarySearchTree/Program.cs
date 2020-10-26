@@ -1,4 +1,10 @@
-﻿using System;
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MyMapNode.cs" company="Capgemini">
+//   Copyright © 2018 Company
+// </copyright>
+// <creator Name="Kretika Arora"/>
+// --------------------------------------------------------------------------------------------------------------------
+using System;
 
 namespace DataStructures_BinarySearchTree
 {
