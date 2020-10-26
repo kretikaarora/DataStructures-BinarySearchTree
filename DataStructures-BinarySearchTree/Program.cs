@@ -29,6 +29,9 @@ namespace DataStructures_BinarySearchTree
             myBinaryTree.Insert(67);
             Console.WriteLine("Displaying Binary Search Tree");
             myBinaryTree.Display();
+            Console.WriteLine("Searching an element");
+            myBinaryTree.Search(63, myBinaryTree);
+            myBinaryTree.Search(12, myBinaryTree);
         }
     }
 }

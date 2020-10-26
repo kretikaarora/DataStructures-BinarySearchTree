@@ -5,7 +5,7 @@ using System.Text;
 namespace DataStructures_BinarySearchTree
 {
     /// <summary>
-    /// Creating My Binar Tree
+    /// Creating My Binary Tree
     /// </summary>
     /// <typeparam name="T"></typeparam>
     class MyBinaryTree<T> where T: IComparable
@@ -98,6 +98,41 @@ namespace DataStructures_BinarySearchTree
         public void GetSize()
         {
             Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
+        }
+        /// <summary>
+        /// Searching for an element
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool Search(T element , MyBinaryTree<T> node)
+        {
+            ///checking for the node first if not null
+            ///then checking for the node data if not equal to element 
+            ///then comparing the nodedata with element to search in either left tree or right tree 
+            ///using recursion 
+            if(node == null)
+            {
+                Console.WriteLine("The element {0} is not present in the Binary search tree",element);
+                return false;
+            }
+            if(node.nodeData.Equals(element))
+            {
+                Console.WriteLine("The element {0} is present in Binary search Tree",element);
+                return true;                
+            }
+            else
+            {
+                Console.WriteLine("we are currently on {0} node", node.nodeData);
+            }
+            if (node.nodeData.CompareTo(element)>0)
+            {
+                 return Search(element, node.leftTree);
+            }
+            else
+            {
+                return Search(element, node.rightTree);
+            }
         }
     }
 }
